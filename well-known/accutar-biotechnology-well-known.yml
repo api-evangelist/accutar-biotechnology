@@ -1,0 +1,56 @@
+generated: '2026-09-06'
+method: probed
+source: live probes of the /.well-known/ surface on every Accutar Biotechnology host
+summary:
+  documents_found: 0
+  note: 'Accutar Biotechnology publishes no /.well-known/ discovery documents. No
+    security.txt, no OIDC/OAuth discovery, no api-catalog, no ai-plugin.json, no A2A
+    agent card. No WellKnown or SecurityTxt pointer is wired in apis.yml because
+    nothing is present — this file records the probe, it does not credit a surface.'
+hosts:
+- host: https://www.accutarbio.com
+  catch_all: none
+  control_probe:
+    path: /.well-known/ae-control-probe
+    status: 404
+    note: a path that cannot exist returns a real WordPress 404, so the 404s below
+      are genuine absences and not a soft-404 catch-all
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+unresolvable_hosts:
+- host: api.accutarbio.com
+  status: NXDOMAIN
+- host: docs.accutarbio.com
+  status: NXDOMAIN
+- host: developer.accutarbio.com
+  status: NXDOMAIN
+- host: app.accutarbio.com
+  status: NXDOMAIN
+- host: chat.pinkcare.ai
+  status: NXDOMAIN
+  note: the PinkCare.AI product page on accutarbio.com links its chat surface at
+    https://chat.pinkcare.ai, but neither pinkcare.ai nor chat.pinkcare.ai resolves
+    in DNS, so the linked product host could not be probed at all
+- host: www.chemirise.com
+  status: connection reset
+  note: chemirise.com 301s to www.chemirise.com, which resets the connection —
+    the ChemiRise product domain is not serving

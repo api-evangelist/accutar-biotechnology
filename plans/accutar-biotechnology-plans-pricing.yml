@@ -1,0 +1,23 @@
+generated: '2026-09-06'
+method: searched
+source: https://www.accutarbio.com/products/
+plan_count: 0
+currency: null
+note: 'Accutar Biotechnology publishes no pricing, plans, tiers or quotas anywhere on
+  its site. There is no pricing page, no self-serve signup and no "contact sales" pricing
+  form. Its AI products are reached only by email enquiry — InsightOne directs readers
+  to demoinsightone@accutarbio.com for a trial or demo and GenusOne to bd@accutarbio.com
+  — and its corporate/academic partnering addresses (corporate@accutarbio.com,
+  academic@accutarbio.com) are the only stated commercial route. The company is
+  clinical-stage: its revenue model is its own drug pipeline and partnering, not a
+  metered software product. An honest zero, not an unfound page.'
+plans: []
+evidence:
+- url: https://www.accutarbio.com/products/
+  status: 200
+- url: https://www.accutarbio.com/insightone/
+  status: 200
+- url: https://www.accutarbio.com/genusone/
+  status: 200
+- url: https://www.accutarbio.com/contact/
+  status: 200
